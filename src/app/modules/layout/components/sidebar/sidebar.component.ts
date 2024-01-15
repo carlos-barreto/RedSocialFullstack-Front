@@ -9,16 +9,12 @@ import { NgClass, NgIf } from '@angular/common';
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [ NgClass,
-    NgIf,
-    AngularSvgIconModule,
-    SidebarMenuComponent,
-    RouterLink,],
+  imports: [NgClass, NgIf, AngularSvgIconModule, SidebarMenuComponent, RouterLink],
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.scss'
+  styleUrl: './sidebar.component.scss',
 })
 export class SidebarComponent implements OnInit {
-  public appJson: any = {displayName: "Red Social",version: "1.0"};
+  public appJson: any = { displayName: 'Red Social', version: '1.0' };
 
   constructor(public themeService: ThemeService, public menuService: MenuService) {}
 
@@ -30,5 +26,9 @@ export class SidebarComponent implements OnInit {
 
   toggleTheme() {
     this.themeService.theme = !this.themeService.isDark ? 'dark' : 'light';
+  }
+
+  onSubmitSignOut() {
+    localStorage.clear();
   }
 }
