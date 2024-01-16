@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Publication } from '../../../models/publication';
+import { Publication } from '../../../publications/models/publication';
 import { NgStyle } from '@angular/common';
-import { environment } from '../../../../../../environments/environment.development';
+import { environment } from '../../../../../environments/environment.development';
 @Component({
   selector: 'app-single-card',
   standalone: true,
