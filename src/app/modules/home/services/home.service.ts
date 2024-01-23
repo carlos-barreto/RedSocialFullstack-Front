@@ -18,13 +18,6 @@ export class HomeService {
   }
   onGetPosts(){
     this.auth = localStorage.getItem('auth');
-    const headerDict = {
-      Authorization: `Bearer ${JSON.parse(this.auth).token}`
-    };
-    const requestOptions = {
-      headers: new HttpHeaders(headerDict),
-    };
-
-    return this._http.get(`${this.url}/publications/all/public`,requestOptions);
+    return this._http.get(`${this.url}/publications/all/public`);
   }
 }
