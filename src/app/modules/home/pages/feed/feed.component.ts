@@ -5,6 +5,7 @@ import { NgClass, NgIf, NgFor } from '@angular/common';
 import { HomeService } from '../../services/home.service';
 import { environment } from '../../../../../environments/environment.development';
 
+
 @Component({
   selector: 'app-feed',
   standalone: true,
@@ -43,4 +44,5 @@ export class FeedComponent implements OnInit {
       }
     );
   }
+
 }

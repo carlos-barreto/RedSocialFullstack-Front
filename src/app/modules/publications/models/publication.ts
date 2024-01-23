@@ -7,4 +7,7 @@ export interface Publication {
   image: string;
   path: string;
   like: number;
+  userName: any;
+  userEmail: any;
+  createdAt: string;
 }
